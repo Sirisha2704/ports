@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Sirisha Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <nav>
+            <div class="nav-container">
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                    <span>Sirisha</span>
+                </div>
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#skill">Skills</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#works">Works</a></div>
+                    <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Contact</a></div>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right">
+                    <img src="https://i.pinimg.com/736x/50/33/87/503387f3aea4f470e1976bfcfe532a18.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Sirisha</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">I blend creativity with technical skills, using design tools like Figma, Adobe XD, and Sketch, paired with development technologies like HTML, CSS, JavaScript, and React. My goal is to create designs that solve problems, elevate user experience, and make an impact.</p>
+                    
+                    <div class="btn">
+                        <a href="resume/SIRISHA.docx"><button>Download CV</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+        <div id="about">
+            <div class="row-container">
+              <h1 class="sub-title">About Me</h1>
+           </div>
+             </div>
+           <div class="container p p-5">
+               <!-- Text Content and Tabs -->
+               <div class="about-text">
+                  <p>Hello! I'm <span><b>Sirisha</b></span>, a passionate <span><b>UI/UX Designer and Developer</b></span> with a strong focus on creating exceptional digital experiences. Combining creativity with technical expertise, I design interfaces that are not only visually stunning but also user-friendly and functional. My goal is to craft seamless experiences that leave a lasting impression while solving real-world problems.</p>
+                  <div class="tab-titles">
+                     <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                     <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="education">
+                     <ul>
+                        <li><span>2020-2024</span><br>Baba Institute Of Engineering and Technology</li>
+                        <li><span>2018-2020</span><br>Sri Chaitanya Junior College</li>
+                        <li><span>2017-2018</span><br>Vignan's High School</li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="skills">
+                     <ul>
+                        <li><span>UI/UX</span><br>Designing & Developing Web/App interfaces</li>
+                     </ul>
+                  </div>
+               </div>
+         
+           </div>
+         </div>
+            
+
+
+<script>
+                            
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+       for(tablink of tablinks){ 
+       tablink.classList.remove("active-link");
+}
+       for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+}  
+
+</script>
+    
+
+        <!-- Skills Section -->
+        <div id="skill">
+            <div class="skillscontent">
+                <h1>My Skills</h1>
+                <div class="Developer">
+                    <h2>Developer</h2>
+                </div>
+                <div class="image-container">
+                    <img src="https://i.pinimg.com/736x/0e/7d/4a/0e7d4ad55cdc3db527af6c3d72f41ad0.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/5d/1c/c8/5d1cc864ae7eebae63a1c5738b446e3d.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/c1/78/5d/c1785d50a929254419fa4aad0560b058.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/e7/97/a8/e797a8c593c81d72f395d1ccc022ba3f.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/9b/4e/e0/9b4ee057076232fb57c48cf80947f8a7.jpg" alt="" height="500px">
+                    <img src="https://i.pinimg.com/736x/2e/7e/e2/2e7ee210b5b4b6e227de691541a6fb2e.jpg" alt="">
+                </div>
+                <div class="Designer">
+                    <h2>Designer</h2>
+                </div>
+                <div class="image-containers">
+                    <img src="https://i.pinimg.com/736x/8e/b3/f2/8eb3f2577bcda41e598bd284f649243c.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/28/dd/3d/28dd3d07bc8cb7a2e6482492e988ce52.jpg" alt="">
+                    <img src="https://i.pinimg.com/736x/17/06/c9/1706c9f16bd08eb5e03f1df3e0a94a1c.jpg" alt="">
+                </div>
+            </div>
+        </div>
+       <!-- Works Section -->
+       <div id="works">
+        <div class="works-content">
+            <h1>My Works</h1>
+        </div>
+    
+        <div class="projects_filter">
+            <ul class="filter list">
+                <li class="active" data-content="all">All Works</li>
+                <li data-content="development">Development Works</li>
+                <li data-content="designing">Designing Works</li>
+                <li data-content="figma">Figma Works</li>
+            </ul>
+        </div>
+    
+        <div class="workcontent-section">
+            <!-- All Works -->
+            <div class="workcontent all active">
+                <h2>All Works</h2>
+                <p>Here are all my works, including development, design, and Figma projects.</p>
+        
+                <!-- Image with Hover Effect -->
+                <div class="image-containers1">
+                    <img src="https://henryegloff.com/media/How-to-Code-a-Basic-Webpage-Using-HTML-Tutorial-2.jpg" alt="">
+                    <h3>Html,Css,Bootstrap</h3>
+                    <div class="overlay">
+                        <a href="https://github.com/Sirisha2704/hotel-.git"><button>SourceCode</button></a>
+                        <a href="https://sirisha2704.github.io/hotel-/"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://images.impression.co.uk/2023/11/gabriel-heinzer-g5jpH62pwes-unsplash.jpg?auto=compress%2Cformat&fit=crop&q=65&format=webp?w=755&h=755&q=65" alt="" width="750px">
+                    <h3>JavaScript</h3>
+                    <div class="overlay">
+                        <a href="https://github.com/Sirisha2704/jswork.git"><button>SourceCode</button></a>
+                        <a href="https://sirisha2704.github.io/jswork/"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://dac.digital/wp-content/uploads/2023/02/reactjs-example-3-optimized.png" alt="">
+                    <h3>React js</h3>
+                    <div class="overlay">
+                        <a href="https://github.com/Sirisha2704/react9445.git"><button>SourceCode</button></a>
+                        <a href="https://sirisha2704.github.io/react9445/"><button>Preview</button></a>
+                    </div>
+                </div>
+
+                
+                <div class="image-containers1">
+                    <img src="https://www.wppourlesnuls.com/wp-content/uploads/2019/05/wordpress.gif" height="100px" width="100px" alt="" >
+                    <h3>Wordpress</h3>
+                    <div class="overlay">
+                        <a href="https://dev-sirisha9445.pantheonsite.io/"><button>Preview</button></a>
+                    </div>
+                </div>
+
+                
+                <div class="image-containers1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPd5hnpM912cP75WDfDiRxF_j99yU7V5r8oQ&s" alt="">
+                    <h3>Woo Commerce</h3>
+                    <div class="overlay">
+                        <a href="https://dev-sirishadynamic.pantheonsite.io/"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+        
+                <div class="image-containers1">
+                    <img src="image/modern-poster-mockup-minimalist-frame-industrial-gallery-setting-clean-look-00124.jpg" alt="" height="400px" width="400px">
+                    <h3>Photoshop</h3>
+                    <div class="overlay">
+                        <a href="image/Folder 2.png"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/e3e99422-b11f-4f72-b22d-953137aa8d57.jpeg?auto=format&q=50" alt="">
+                    <h3>figjam</h3>
+                    <div class="overlay">
+                        <a href="https://www.figma.com/board/gRXGEXWWktX4syVnpzUq34/Gaana?node-id=0-1&p=f&t=Dx4KU7fPgfyMyTh1-0"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://pollthepeople.app/wp-content/uploads/2022/06/Figma-Design-Flow-Image.jpg" alt="">
+                    <h3>figma</h3>
+                    <div class="overlay">
+                        <a href="https://www.figma.com/design/kmPMpooGKLfZRwp4mFD47C/Gaana?t=Dx4KU7fPgfyMyTh1-0"><button>Design</button></a>
+                        <a href="https://www.figma.com/proto/kmPMpooGKLfZRwp4mFD47C/Gaana?t=Dx4KU7fPgfyMyTh1-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2&show-proto-sidebar=1"><button>Preview</button></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Development Works -->
+            <div class="workcontent development">
+                <h2>Development Works</h2>
+                <p>These are the development-related projects I have worked on.</p>
+                
+                <div class="image-containers1">
+                    <img src="https://henryegloff.com/media/How-to-Code-a-Basic-Webpage-Using-HTML-Tutorial-2.jpg" alt="">
+                    <h3>Html,Css,Bootstrap</h3>
+                    <div class="overlay">
+                        <a href="https://github.com/Sirisha2704/hotel-.git"><button>SourceCode</button></a>
+                        <a href="https://sirisha2704.github.io/hotel-/"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://images.impression.co.uk/2023/11/gabriel-heinzer-g5jpH62pwes-unsplash.jpg?auto=compress%2Cformat&fit=crop&q=65&format=webp?w=755&h=755&q=65" alt="" width="750px">
+                    <h3>JavaScript</h3>
+                    <div class="overlay">
+                        <a href="https://github.com/Sirisha2704/jsworks.git"><button>SourceCode</button></a>
+                        <a href="https://sirisha2704.github.io/jsworks/"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://dac.digital/wp-content/uploads/2023/02/reactjs-example-3-optimized.png" alt="">
+                    <h3>React js</h3>
+                    <div class="overlay">
+                        <a href="https://github.com/Sirisha2704/react9445.git"><button>SourceCode</button></a>
+                        <a href="https://sirisha2704.github.io/react9445/"><button>Preview</button></a>
+                    </div>
+                </div>
+
+                
+                
+                <div class="image-containers1">
+                    <img src="https://www.wppourlesnuls.com/wp-content/uploads/2019/05/wordpress.gif" height="100px" width="100px" alt="" >
+                    <h3>Wordpress</h3>
+                    <div class="overlay">
+                        <a href="https://dev-sirisha9445.pantheonsite.io/"><button>Preview</button></a>
+                    </div>
+                </div>
+
+                
+                <div class="image-containers1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPd5hnpM912cP75WDfDiRxF_j99yU7V5r8oQ&s" alt="">
+                    <h3>Woo Commerce</h3>
+                    <div class="overlay">
+                        <a href="https://dev-sirishadynamic.pantheonsite.io/"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+            </div>
+    
+            
+            <!-- Designing Works -->
+            <div class="workcontent designing">
+                <h2>Designing Works</h2>
+                <p>These are the designing-related projects I have worked on.</p>
+                
+                <div class="image-containers1">
+                 <img src="image/hanging-poster-mockup-black-frame-modern-studio-setup-creative-ambience-00129.jpg" alt="" >
+                    <div class="overlay">
+                       <a href="image/poster 3.png"><button>Preview</button></a>
+                        </div>
+                </div>
+
+
+                <div class="image-containers1">
+                    <img src="image/modern-poster-mockup-minimalist-frame-industrial-gallery-setting-clean-look-00124.jpg" alt="">                
+                    <div class="overlay">
+                    <a href="image/Folder 2.png"><button>Preview</button></a>
+                     </div>
+                </div>
+
+                <div class="image-containers1">
+                <img src="image/elevated-dual-flyer-mockup-bold-red-background-minimalist-showcase-20.jpg" alt="" >
+                <div class="overlay">
+                    <a href="image/19e4d3ba-453c-4cb5-b960-b982b0def42b.jpg" ><button>Preview</button></a>
+                </div>
+            </div>
+
+            <div class="image-containers1">
+                <img src="image/dining-room-poster-mockup-light-wooden-frame-cozy-candlelit-ambience-00126.jpg" alt="" >
+                <div class="overlay">
+                    <a href="image/37b9d42a-349e-42c4-beef-c03fc2257591.jpg" ><button>Preview</button></a>
+                </div>
+            </div>
+
+            <div class="image-containers1">
+                <img src="image/vertical-billboard-mockup-on-highway-with-clear-sky-020.jpg" alt="" >
+                <div class="overlay">
+                    <a href="image/bb4b2ef4-e193-4d6c-9446-6c61ab5d4c3d.jpg" ><button>Preview</button></a>
+                </div>
+            </div>
+
+
+
+
+            <div class="image-containers1">
+                <img src="image/d30ac43f-bf72-44af-a947-6dfc84fac8ce.jpg" alt="" >
+                <div class="overlay">
+                    <a href="image/d30ac43f-bf72-44af-a947-6dfc84fac8ce.jpg" ><button>Preview</button></a>
+                </div>
+            </div>
+
+
+
+
+            </div>
+            <!-- Figma Works -->
+            <div class="workcontent figma">
+                <h2>Figma Works</h2>
+                <p>These are my Figma-based design works.</p>
+             
+                <div class="image-containers1">
+                    <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/e3e99422-b11f-4f72-b22d-953137aa8d57.jpeg?auto=format&q=50" alt="">
+                    <h3>figjam</h3>
+                    <div class="overlay">
+                        <a href="https://www.figma.com/board/gRXGEXWWktX4syVnpzUq34/Gaana?node-id=0-1&p=f&t=Dx4KU7fPgfyMyTh1-0"><button>Preview</button></a>
+                    </div>
+                </div>
+        
+                <div class="image-containers1">
+                    <img src="https://pollthepeople.app/wp-content/uploads/2022/06/Figma-Design-Flow-Image.jpg" alt="">
+                    <h3>figma</h3>
+                    <div class="overlay">
+                        <a href="https://www.figma.com/design/kmPMpooGKLfZRwp4mFD47C/Gaana?t=Dx4KU7fPgfyMyTh1-0"><button>Design</button></a>
+                        <a href="https://www.figma.com/proto/kmPMpooGKLfZRwp4mFD47C/Gaana?t=Dx4KU7fPgfyMyTh1-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2&show-proto-sidebar=1"><button>Preview</button></a>
+                    </div>
+                </div>
+            </div>
+  
+        </div>
+    </div> <!-- End of works -->
+       
+    
+    <script>
+        // JavaScript for handling the tab functionality
+document.querySelectorAll('.projects_filter li').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Remove 'active' class from all tabs
+        document.querySelectorAll('.projects_filter li').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked tab
+        this.classList.add('active');
+
+        // Get the value of the clicked tab's data-content attribute
+        const contentType = this.getAttribute('data-content');
+
+        // Hide all workcontent sections
+        document.querySelectorAll('.workcontent').forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // Show the corresponding workcontent section
+        document.querySelector(`.workcontent.${contentType}`).classList.add('active');
+    });
+});
+
+</script>
+<!---contact--->
+
+    <div class="get">
+        <h2>Get in touch</h2>
+    </div>
+
+    <section id="contact">
+        
+        <p>If you'd like to collaborate, have any questions, or just want to say hello, feel free to reach out!</p>
+    
+        <div class="contact-grid">
+            <!-- Left side with text -->
+            <div class="contact-text">
+                <a href=""><h3>Contact Me</h3></a>
+                <p>If you have any inquiries or want to discuss potential collaborations, I'm here to help!</p>
+            </div>
+    
+            <!-- Right side with form -->
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="contact-info">
+            <p>Email: <a href="mailto:your.email@example.com">kanapakasirisha9@gmail.com</a></p>
+            <p>Phone: 9398894229</p>
+        </div>
+    </section>
+    
+    </body>
+    </html>
+
+
+
+
+

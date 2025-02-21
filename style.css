@@ -1,0 +1,702 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(209, 242, 255), rgb(173, 217, 254)); 
+}
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+
+}
+.nav-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+}
+.logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span{
+    color: rgb(0, 122, 255);
+    text-shadow: 0 0 10px rgb(0, 122, 255);
+}
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+    color: white;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 122, 255); 
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .contact-btn{
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255); 
+    transition: 0.2s linear;
+}
+.nav-container .contact-btn a{
+    color: rgb(255, 255, 255);
+    transition: 0.3s linear;
+}
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
+    background-color: rgb(91, 164, 242); 
+    color:white;
+}
+.nav-container .links a:hover{
+    color: rgb(0, 122, 255); 
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: rgb(0, 122, 255); 
+}
+section{
+    width: 100%;
+    height:100vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+/* Image container style */
+.image {
+    width: 350px; /* Set the size of the image container */
+    height: 350px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures the image fits within the circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for effect */
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    position: relative;
+    animation: zoomIn 1.5s ease-out; /* Apply zoom-in effect when the page loads */
+}
+
+
+
+
+.main-container .content{
+    color: black;
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+.content h1 span{
+    color: rgb(0, 122, 255); 
+    text-shadow: 0 0 10px rgb(0, 122, 255); 
+}
+.content .typewriter{
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+.content .typewriter span{
+    color: rgb(0, 122, 255); 
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgb(0, 122, 255); 
+    position: relative;
+    transition: 0.3s linear;
+}
+.typewriter span::before{
+    content: "Developer";
+    animation: words 15s infinite;
+}
+.typewriter span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation:  cursor 0.6s linear infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+@keyframes words {
+    0%, 33%{
+        content: "Developer";
+    }
+    34%, 66%{
+        content: "Designer";
+    }
+}
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color:transparent;
+    border: 0.2rem solid rgb(0, 122, 255);
+    border-radius: 50%;
+    color:rgb(0, 122, 255); 
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+.social-links i:hover{
+    scale: 1.3;
+    color: white;
+    background-color: rgb(0, 122, 255); 
+    filter: drop-shadow(0 0 10px rgb(0, 122, 255)); 
+}
+.content button{
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: rgb(0, 122, 255); 
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+ scale: 1.1;
+ color: rgb(0, 122, 255); 
+ border: 2px solid rgb(0, 122, 255); 
+ background-color: transparent;
+ font-weight: 700;
+ box-shadow: 0 0 40px rgb(0, 122, 255); 
+}
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,.cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+    
+}
+#about {
+  height: 200%;
+}
+.row-container{
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sub-title {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    color: #000000;
+    padding-left: 50px;
+    margin-right: 50%;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(0, 122, 255);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color:rgb(0, 122, 255);
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* Image container style */
+.image {
+    width: 350px; /* Set the size of the image container */
+    height: 350px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures the image fits within the circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for effect */
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    position: relative;
+    animation: zoomIn 1.5s ease-out; /* Apply zoom-in effect when the page loads */
+}
+
+/* Skills Section Styling */
+.skills {
+    padding-top: 50px;
+    margin-top: 50px;
+    text-align: center;
+    height: 200%;
+}
+
+.skillscontent h1 {
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+    padding-top: 10%;
+
+}
+
+/* Developer Section */
+.Developer h2, .Designer h2 {
+    font-size: 1.8rem;
+    color: rgb(0, 122, 255); /* Color of section titles */
+    margin: 30px 0;
+    text-align: center;
+    padding-top: 30px;
+  
+}
+
+/* Image Containers Styling */
+.image-container, .image-containers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-container img, .image-containers img {
+    width: 150px; /* Size of the image */
+    height:150px;
+    border-radius: 30%; /* Making the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.image-container img:hover, .image-containers img:hover {
+    transform: scale(1.1); /* Enlarges the image on hover */
+    box-shadow: 0 0 15px rgba(0, 122, 255, 0.6); /* Adds a glowing effect */
+}
+
+/* Add additional styling to the Developer and Designer sections */
+.Developer, .Designer {
+    margin-top: 40px;
+}
+
+.Developer img, .Designer img {
+    margin-top: 10px;
+}
+/* Works Section Styling */
+#works {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.works-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-top: 10%;
+    color: #000;
+}
+
+/* Filter Section (Tabs) */
+.projects_filter ul.list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.projects_filter li {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: rgb(0, 122, 255);
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.projects_filter li:hover,
+.projects_filter li.active {
+    background-color: rgb(0, 122, 255);
+    color: white;
+    border-color: rgb(0, 122, 255);
+}
+
+/* Content Section */
+.workcontent-section {
+    margin-top: 40px;
+}
+
+.workcontent {
+    display: none;
+}
+
+.workcontent.active {
+    display: block;
+}
+
+.workcontent h2 {
+    font-size: 1.8rem;
+    color: rgb(0, 122, 255);
+    padding-top: 3%;
+}
+
+.workcontent p {
+    font-size: 1rem;
+    color: #555;
+}
+/* Styling for the image container */
+.workcontent img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease; /* Add smooth transition for the hover effect */
+}/*/* Style for Image Container */
+.image-containers1 {
+    position: relative;
+    display: inline-block;
+    width: 80%;  /* Ensure it fills the parent container */
+    max-width: 300px;  /* Limit the width to a max value */
+    height: 300px;  /* Fixed height for consistency */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    overflow: hidden; /* Hide overflow to maintain smooth edges */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Animation on hover */
+    margin: 10px; /* Add margin for gap between boxes */
+}
+
+/* Hover effect for Image Container */
+.image-containers1:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}
+
+/* Title text inside the image container */
+.image-containers1 h3 {
+    color: #fff; /* White text for contrast */
+    font-family: 'Arial', sans-serif; /* Modern font */
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow */
+}
+
+/* Overlay Style */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    border-radius: 5px; /* Match container's rounded corners */
+}
+
+/* Display Overlay on Hover */
+.image-containers1:hover .overlay {
+    opacity: 1;  /* Show overlay on hover */
+}
+
+
+/* Style the button inside the overlay */
+.overlay button {
+    margin: 20px;
+    padding: 15px 30px; /* Reduced padding for better button fit */
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.8), rgba(0, 255, 255, 0.8)); /* Gradient background */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover Effect */
+.overlay button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Optional: Style image inside container */
+.image-containers1 img {
+    width:100%;
+    height:100%;
+    object-fit: cover; /* Ensures image covers the container */
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.image-containers1:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* General Styles for Contact Section */
+#contact {
+    background-color: linear-gradient(to right, rgb(209, 242, 255), rgb(173, 217, 254)); 
+    padding: 60px 20px;
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+.get h2 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding-top:8%;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Section: Text */
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-text h3 {
+    font-size: 28px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.contact-text p {
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Right Section: Form */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #000000;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #000000;
+    background-color:  rgb(173, 217, 254);
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #6c5ce7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.6);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 14px 30px;
+    background-color: #6c5ce7;
+
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #5a4fc3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.contact-info a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #5a4fc3;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack the sections on smaller screens */
+        gap: 20px;
+    }
+
+    .contact-text, .contact-form {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;  /* Make the button take up full width on small screens */
+    }
+}
+
