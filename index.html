@@ -22,25 +22,50 @@
                     <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#works">Works</a></div>
                     <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Contact</a></div>
                 </div>
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+            <div class="dropdown">
+                <div class="link">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skill">Skills</a>
+                    <a href="#works"> Works</a>
+                    <a href="#contact">Contact</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                </div>
             </div>
         </nav>
         <section>
             <div class="main-container">
-                <div class="image" data-aos="zoom-in-right">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">                                                                                                                                                                   
                     <img src="https://i.pinimg.com/736x/50/33/87/503387f3aea4f470e1976bfcfe532a18.jpg" alt="">
                 </div>
                 <div class="content">
                     <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Sirisha</span></h1>
                     <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
-                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">I blend creativity with technical skills, using design tools like Figma, Adobe XD, and Sketch, paired with development technologies like HTML, CSS, JavaScript, and React. My goal is to create designs that solve problems, elevate user experience, and make an impact.</p>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">I blend creativity with technical skills, using design tools like Figma, and Sketch, paired with development technologies like HTML, CSS, JavaScript, and React. My goal is to create designs that solve problems, elevate user experience, and make an impact.</p>
                     
                     <div class="btn">
                         <a href="resume/SIRISHA.pdf"><button>Download CV</button></a>
-                    </div>
+                    </div>                                                                                                                                                                                                                      
                 </div>
             </div>
         </section>
-       
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+    </div>
 
         <div id="about">
             <div class="row-container">
@@ -68,7 +93,6 @@
                      </ul>
                   </div>
                </div>
-         
            </div>
          </div>
             
@@ -382,17 +406,22 @@ document.querySelectorAll('.projects_filter li').forEach(tab => {
     <section id="contact">
         
         <p>If you'd like to collaborate, have any questions, or just want to say hello, feel free to reach out!</p>
-    
+        
+            
         <div class="contact-grid">
             <!-- Left side with text -->
             <div class="contact-text">
                 <a href=""><h3>Contact Me</h3></a>
                 <p>If you have any inquiries or want to discuss potential collaborations, I'm here to help!</p>
+                <p>Phone No: 9398894229</p>
+            <p>Adress: GAJUWAKA<br> VISAKHAPATNAM  </p>
+                      
             </div>
     
             <!-- Right side with form -->
             <div class="contact-form">
-                <form action="submit_form.php" method="post">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="02ca6803-44b3-4e07-9037-b33e11be6191">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
     
@@ -411,8 +440,8 @@ document.querySelectorAll('.projects_filter li').forEach(tab => {
         </div>
     
         <div class="contact-info">
-            <p>Email: <a href="mailto:your.email@example.com">kanapakasirisha9@gmail.com</a></p>
-            <p>Phone: 9398894229</p>
+            <p>Phone No: 9398894229</p>
+
         </div>
     </section>
     
