@@ -27,7 +27,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000;
+    background-color: rgb(173, 217, 254);
     color: rgb(255, 255, 255);
 }
 .logo{
@@ -50,7 +50,7 @@ nav{
     text-decoration: none;
     font-weight: 500;
     transform: 0.3s linear;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .nav-container .links a::before{
     position: absolute;
@@ -73,7 +73,7 @@ nav{
     transition: 0.2s linear;
 }
 .nav-container .contact-btn a{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transition: 0.3s linear;
 }
 .nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
@@ -81,7 +81,7 @@ nav{
     color:white;
 }
 .nav-container .links a:hover{
-    color: rgb(0, 122, 255); 
+    color: rgb(255, 255, 255); 
 }
 .dropdown{
     z-index: 100;
@@ -122,21 +122,71 @@ section{
 
 /* Image container style */
 .image {
-    width: 350px; /* Set the size of the image container */
+    width: 350px; 
     height: 350px;
-    border-radius: 50%; /* Makes the image circular */
-    overflow: hidden; /* Ensures the image fits within the circle */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for effect */
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     display: flex;
     justify-content: right;
     align-items: right;
     position: relative;
-    animation: zoomIn 1.5s ease-out; /* Apply zoom-in effect when the page loads */
+    animation: zoomIn 1.5s ease-out; 
+}
+
+/* Zoom-out effect on hover */
+.image:hover {
+    transform: scale(0.9); /* Shrink the image to 90% of its original size */
+}
+
+/* Zoom-in animation (optional, if you'd like to keep the zoom-in effect) */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hamburg, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
 }
 
 
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
 
+.dropdown .link a{
+    color:rgb(173, 217, 254);
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
 
+.dropdown .link a:hover{
+    background-color: rgb(0, 0, 0);
+}
 .main-container .content{
     color: black;
     width: 40%;
@@ -189,26 +239,6 @@ section{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
 }
-.social-links i{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color:transparent;
-    border: 0.2rem solid rgb(0, 122, 255);
-    border-radius: 50%;
-    color:rgb(0, 122, 255); 
-    margin: 5px 10px;
-    font-size: 1.5rem;
-    transition: 0.2s linear;
-}
-.social-links i:hover{
-    scale: 1.3;
-    color: white;
-    background-color: rgb(0, 122, 255); 
-    filter: drop-shadow(0 0 10px rgb(0, 122, 255)); 
-}
 .content button{
     width: 40%;
     height: 6vh;
@@ -230,29 +260,69 @@ section{
  font-weight: 700;
  box-shadow: 0 0 40px rgb(0, 122, 255); 
 }
+
+@keyframes words {
+    0%, 33%{
+        content: "Developer";
+    }
+    34%, 66%{
+        content: "Designer";
+    }
+}
+
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.content button{
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: rgb(0, 122, 255); 
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+ scale: 1.1;
+ color: rgb(0, 122, 255); 
+ border: 2px solid rgb(0, 122, 255); 
+ background-color: transparent;
+ font-weight: 700;
+ box-shadow: 0 0 40px rgb(0, 122, 255); 
+}
+
 @media (max-width:884px) {
     body{
         overflow-y: visible;
     }
+
     nav .logo{
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
+        display: none;
     }
+
     .main-container{
         display: flex;
         flex-direction: column;
     }
+
     .nav-container .links{
         display: none;
     }
+
     .hamburg,.cancel{
         display: block;
     }
+
     .main-container .content{
         width: 80%;
     }
+
     .social-links i{
         width: 2.5rem;
         height: 2.5rem;
@@ -261,12 +331,18 @@ section{
     .cancel{
         color: white;
     }
+
     .main-container .image{
         width: 80%;
-        margin-bottom: 0px;
+     
     }
-    
+    .content button{
+        width: 100%;
+
+    }
+
 }
+
 #about {
   height: 200%;
 }
@@ -438,6 +514,19 @@ section{
     background-color: rgb(0, 122, 255);
     color: white;
     border-color: rgb(0, 122, 255);
+}
+
+@media screen and (max-width: 884px) {
+    .projects_filter ul.list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .projects_filter li {
+        font-size: 1rem; /* Reduce font size */
+        padding: 8px 16px; /* Adjust padding */
+        margin-bottom: 10px; /* Space between items */
+    }
 }
 
 /* Content Section */
