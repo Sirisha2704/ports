@@ -403,52 +403,49 @@ document.querySelectorAll('.projects_filter li').forEach(tab => {
         <h2>Get in touch</h2>
     </div>
 
-    <section id="contact">
-        
-        <p>If you'd like to collaborate, have any questions, or just want to say hello, feel free to reach out!</p>
-        
+   
+<div id="contact">
+    <div class="container">
+        <!-- Left Section - Contact Details -->
+        <div class="contact-details">
+            <h2>Contact Information</h2>
+            <p>Feel free to get in touch with me. You can reach me through the following channels:</p>
             
-        <div class="contact-grid">
-            <!-- Left side with text -->
-            <div class="contact-text">
-                <a href=""><h3>Contact Me</h3></a>
-                <p>If you have any inquiries or want to discuss potential collaborations, I'm here to help!</p>
-                <p>Phone No: 9398894229</p>
-            <p>Adress: GAJUWAKA<br> VISAKHAPATNAM  </p>
-                      
+            <div class="info">
+                <i class="fa fa-phone"></i><strong>Phone:+91 939889429</strong>
             </div>
-    
-            <!-- Right side with form -->
-            <div class="contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="02ca6803-44b3-4e07-9037-b33e11be6191">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject">
-    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-    
-                    <button type="submit">Send Message</button>
-                </form>
+            <div class="info">
+                <i class="fa fa-envelope"></i><strong>Email:kanapakasirisha9@gmail.com</strong>
+            </div>
+            <div class="info">
+                <i class="fa fa-map-marker"></i><strong>Location:Gajuwaka, <br>visakhapatnam</strong> 
             </div>
         </div>
-    
-        <div class="contact-info">
-            <p>Phone No: 9398894229</p>
 
+        <!-- Right Section - Form Table -->
+        <div class="form-table">    
+            <h2>Contact Me</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="02ca6803-44b3-4e07-9037-b33e11be6191">
+        
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject"  placeholder="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="3" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
         </div>
-    </section>
+    </div>
+</div>
     
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </body>
     </html>
-
-
-
-
-
