@@ -303,7 +303,7 @@ section{
     }
 
     nav .logo{
-        display: none;
+        display: block;
     }
 
     .main-container{
@@ -662,130 +662,119 @@ section{
     font-weight: 600;
     text-align: center;
     padding-top:8%;
+}     /* Container for the layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 10px;
 }
 
-#contact p {
-    font-size: 18px;
+/* Left Section - Contact Details */
+.contact-details {
+    flex: 1;
+    max-width: 45%;
+    padding: 30px;
+    border-radius: 8px;
+    margin-right: 20px;
+    
+}
+
+.contact-details h2 {
     color: #000000;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    padding-bottom: 10px;
 }
 
-/* Contact Grid Layout */
-.contact-grid {
+.contact-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #000;
+}
+
+ /* Styling for each info item */
+ .contact-details .info {
+  display: flex;
+  align-items: center;
+   justify-content: start;
+ margin: 10px 0;
+  width: 100%;
+  padding: 5px;
+  }
+
+ .contact-details .info i {
+  color: #5C6BC0;
+   margin-right: 10px;
+        }
+
+  .contact-details .info strong {
+   font-size: 18px;
+     color: #333;
+        }
+
+/* Right Section - Form Table */
+.form-table {
+    flex: 1;
+    max-width: 45%;
+    padding: 30px;
+    border-radius: 8px;
+   
+}
+
+.form-table h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+/* Form Styling */
+.form-table form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 15px;
 }
 
-/* Left Section: Text */
-.contact-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-text h3 {
-    font-size: 28px;
-    color: #000000;
-    font-weight: 600;
-}
-
-.contact-text p {
+.form-table label {
     font-size: 16px;
     color: #000000;
 }
 
-/* Right Section: Form */
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-label {
-    font-size: 18px;
-    color: #000000;
-}
-
-input, textarea {
+.form-table input, .form-table textarea {
     width: 100%;
-    padding: 15px;
-    border: 2px solid #000000;
-    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgb(173, 217, 254);
+    border-radius: 4px;
     font-size: 16px;
-    color: #000000;
-    background-color:  rgb(173, 217, 254);
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
 }
 
-input:focus, textarea:focus {
-    border-color: #6c5ce7;
-    outline: none;
-    box-shadow: 0 0 5px rgba(108, 92, 231, 0.6);
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-button {
-    padding: 14px 30px;
-    background-color: #6c5ce7;
-
-    font-size: 18px;
+.form-table input[type="submit"] {
+    background-color: #5C6BC0;
+    color: rgb(173, 217, 254);
     border: none;
-    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: fit-content;
-    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
-button:hover {
-    background-color: #5a4fc3;
-    transform: translateY(-2px);
-}
-
-button:active {
-    transform: translateY(2px);
-}
-
-/* Contact Info */
-.contact-info {
-    margin-top: 40px;
-    font-size: 18px;
-    color: #000000;
-}
-
-.contact-info a {
-    color: #6c5ce7;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #5a4fc3;
-    text-decoration: underline;
+.form-table input[type="submit"]:hover {
+    background-color: #3f51b5;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr; /* Stack the sections on smaller screens */
-        gap: 20px;
+    .container {
+        flex-direction: column;
+        padding: 20px;
     }
 
-    .contact-text, .contact-form {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;  /* Make the button take up full width on small screens */
+    .contact-details, .form-table {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
-
